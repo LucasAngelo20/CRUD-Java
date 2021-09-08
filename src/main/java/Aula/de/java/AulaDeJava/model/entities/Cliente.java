@@ -1,4 +1,4 @@
-package Aula.de.java.AulaDeJava.models;
+package Aula.de.java.AulaDeJava.model.entities;
 
 public class Cliente {
 	private int id;
