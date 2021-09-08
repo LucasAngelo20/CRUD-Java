@@ -13,15 +13,14 @@ import Aula.de.java.AulaDeJava.model.repositories.ProdutoRepository;
 @RestController
 @RequestMapping("/api/produtos")
 public class ProdutoController {
-	
+
 	@Autowired
 	private ProdutoRepository produtoRepository;
-	
+
 	@PostMapping
-	public @ResponseBody Produto novoProduto(@RequestParam String nome) {
-		Produto produto = new Produto(nome);
+	public @ResponseBody Produto novoProduto(Produto produto) {
 		produtoRepository.save(produto);
 		return produto;
-		
+
 	}
 }
